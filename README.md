@@ -27,14 +27,3 @@
 
 Откройте файл `index.html` в браузере.
 
-## Деплой на GitHub Pages
-
-1. Создайте репозиторий на GitHub.
-2. Загрузите файлы `index.html`, `style.css`, `script.js` и `README.md`.
-3. Откройте настройки репозитория: `Settings` -> `Pages`.
-4. В разделе `Build and deployment` выберите:
-   - `Source`: `Deploy from a branch`
-   - `Branch`: `main`
-   - папка: `/root`
-5. Сохраните настройки.
-6. Через несколько минут сайт будет доступен по ссылке GitHub Pages.
