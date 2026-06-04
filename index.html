@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="app" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="eyebrow">GitHub API</p>
+        <h1 id="page-title">GitHub Profile Card</h1>
+      </div>
+
+      <form class="search" id="search-form">
+        <label class="visually-hidden" for="username">GitHub username</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Введите username"
+          autocomplete="off"
+          required
+        >
+        <button id="search-button" type="submit">Найти</button>
+      </form>
+
+      <p class="loading hidden" id="loading">Загружаю...</p>
+      <p class="error hidden" id="error" role="alert"></p>
+
+      <article class="profile hidden" id="profile"></article>
+
+      <section class="repos hidden" id="repos-section" aria-labelledby="repos-title">
+        <h2 id="repos-title">Последние репозитории</h2>
+        <div class="repo-list" id="repos"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
