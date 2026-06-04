@@ -12,6 +12,7 @@
       <div class="intro">
         <p class="eyebrow">GitHub API</p>
         <h1 id="page-title">GitHub Profile Card</h1>
+        <button class="theme-toggle" id="theme-toggle" type="button">Темная тема</button>
       </div>
 
       <form class="search" id="search-form">
@@ -23,13 +24,40 @@
           autocomplete="off"
           required
         >
+        <label class="visually-hidden" for="compare-username">Second GitHub username</label>
+        <input
+          id="compare-username"
+          type="text"
+          placeholder="Сравнить с username"
+          autocomplete="off"
+        >
         <button id="search-button" type="submit">Найти</button>
+        <button id="random-button" type="button">Случайный</button>
       </form>
+
+      <div class="search-history hidden" id="search-history" aria-label="Последние поиски"></div>
+
+      <div class="controls">
+        <label for="repo-sort">Сортировка репозиториев</label>
+        <select id="repo-sort">
+          <option value="updated">По обновлению</option>
+          <option value="stars">По звездам</option>
+          <option value="created">По созданию</option>
+        </select>
+      </div>
 
       <p class="loading hidden" id="loading">Загружаю...</p>
       <p class="error hidden" id="error" role="alert"></p>
 
-      <article class="profile hidden" id="profile"></article>
+      <section class="profiles hidden" id="profiles" aria-label="Профили">
+        <article class="profile hidden" id="profile"></article>
+        <article class="profile hidden" id="compare-profile"></article>
+      </section>
+
+      <section class="languages hidden" id="languages-section" aria-labelledby="languages-title">
+        <h2 id="languages-title">Топ языков</h2>
+        <div class="language-list" id="languages"></div>
+      </section>
 
       <section class="repos hidden" id="repos-section" aria-labelledby="repos-title">
         <h2 id="repos-title">Последние репозитории</h2>
