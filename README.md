@@ -85,5 +85,5 @@ github-profile-card/
 
 ## это точно все и я уверен 👉👈
 
-👉https://wh3r33.github.io/github-profile-card/👈
+https://wh3r33.github.io/github-profile-card/
 
