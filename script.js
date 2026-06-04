@@ -416,6 +416,9 @@ function hideOldData() {
 
 function setLoading(isLoading) {
   loading.classList.toggle("hidden", !isLoading);
+  form.setAttribute("aria-busy", String(isLoading));
+  usernameInput.disabled = isLoading;
+  compareUsernameInput.disabled = isLoading;
   searchButton.disabled = isLoading;
   randomButton.disabled = isLoading;
   repoSort.disabled = isLoading;

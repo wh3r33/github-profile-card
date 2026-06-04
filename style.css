@@ -329,14 +329,23 @@ button:disabled {
 }
 
 .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   margin-bottom: 18px;
   color: var(--muted);
   font-weight: 900;
 }
 
-.loading::before {
-  content: "☆ ";
-  color: var(--accent);
+.spinner {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border: 3px solid rgba(255, 196, 214, 0.42);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
 }
 
 .error {
@@ -590,6 +599,10 @@ body[data-theme="dark"] .stat {
   display: none;
 }
 
+.loading.hidden {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -610,6 +623,12 @@ body[data-theme="dark"] .stat {
 
   50% {
     transform: translate3d(0, -10px, 0) rotate(2deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

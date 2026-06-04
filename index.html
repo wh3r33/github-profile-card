@@ -46,7 +46,10 @@
         </select>
       </div>
 
-      <p class="loading hidden" id="loading">Загружаю...</p>
+      <div class="loading hidden" id="loading" role="status" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Загружаю...</span>
+      </div>
       <p class="error hidden" id="error" role="alert"></p>
 
       <section class="profiles hidden" id="profiles" aria-label="Профили">
